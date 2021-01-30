@@ -48,5 +48,17 @@
     <ClCompile Include="브루트포스_3085.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="브루트포스_1476.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_1107.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_14500.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_6064.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

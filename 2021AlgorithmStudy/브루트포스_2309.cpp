@@ -90,7 +90,7 @@ int main() {
 			}
 		}
 		if (!flag)
-			break;
+			break;	
 	}
 
 	sort(height.begin(), height.end());
