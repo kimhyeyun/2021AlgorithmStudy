@@ -60,5 +60,11 @@
     <ClCompile Include="브루트포스_6064.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="브루트포스_1748.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_9095.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
