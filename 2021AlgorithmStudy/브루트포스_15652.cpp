@@ -21,7 +21,7 @@ void DFS(int idx, int cnt) {
 	for (int i = idx; i <= N; i++) {
 		num[cnt] = i;
 		DFS(i, cnt + 1);
-	}
+	}	
 }
 
 int main() {

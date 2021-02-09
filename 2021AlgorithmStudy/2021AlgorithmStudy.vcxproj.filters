@@ -93,5 +93,20 @@
     <ClCompile Include="브루트포스_15652.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="브루트포스_15654.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_15655.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_15656.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_15657.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="브루트포스_1248.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
