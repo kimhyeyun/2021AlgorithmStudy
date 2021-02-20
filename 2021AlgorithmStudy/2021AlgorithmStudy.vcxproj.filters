@@ -135,7 +135,19 @@
     <ClCompile Include="순열_6603.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="DP_1363.cpp">
+    <ClCompile Include="DP_1463.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_11727.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_11052.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_16194.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_15990.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
