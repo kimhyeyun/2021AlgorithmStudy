@@ -29,4 +29,4 @@ int main() {
 		cin >> N;
 		cout << (DP[N][1] + DP[N][2] + DP[N][3]) % MOD << "\n";
 	}
-}
+}boj
