@@ -171,5 +171,17 @@
     <ClCompile Include="DP_2225.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DP_15988.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_1149.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_1309.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DP_11057.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
