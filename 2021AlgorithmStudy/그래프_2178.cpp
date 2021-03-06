@@ -1,36 +1,69 @@
 #include <iostream>
 #include <stdio.h>
+#include <queue>
 
 #define MAX 101
 using namespace std;
 
 int maze[MAX][MAX];
-bool visited[MAX][MAX];
+bool visited[MAX][MAX]; //dfs용
+int day[MAX][MAX];
 int n, m;
-int ans = 999999;
+int ans = 999999; //dfs용
 int dx[] = {-1, 0, 1, 0};
 int dy[] = {0, -1, 0, 1};
 
-void DFS(int x, int y, int cnt)
+// void DFS(int x, int y, int cnt)
+// {
+//     visited[x][y] = true;
+//     if (x == n - 1 && y == m - 1)
+//     {
+//         ans = min(ans, cnt);
+//         return;
+//     }
+
+//     for (int i = 0; i < 4; i++)
+//     {
+//         int nx = x + dx[i];
+//         int ny = y + dy[i];
+
+//         if (nx >= 0 && nx < n && ny >= 0 && ny < m)
+//         {
+//             if (maze[nx][ny] == 1 && !visited[nx][ny])
+//             {
+//                 visited[nx][ny] = true;
+//                 DFS(nx, ny, cnt + 1);
+//             }
+//         }
+//     }
+// }
+
+//최단 경로는 bfs로 구해야함
+void BFS(int x, int y)
 {
-    visited[x][y] = true;
-    if (x == n - 1 && y == m - 1)
-    {
-        ans = min(ans, cnt);
-        return;
-    }
+    queue<pair<int, int> > q;
+    q.push(make_pair(x, y));
+    day[x][y] = 1;
 
-    for (int i = 0; i < 4; i++)
+    while (!q.empty())
     {
-        int nx = x + dx[i];
-        int ny = y + dy[i];
+        int tmpx = q.front().first;
+        int tmpy = q.front().second;
 
-        if (nx >= 0 && nx < n && ny >= 0 && ny < m)
+        q.pop();
+
+        for (int i = 0; i < 4; i++)
         {
-            if (maze[nx][ny] == 1 && !visited[nx][ny])
+            int nx = tmpx + dx[i];
+            int ny = tmpy + dy[i];
+
+            if (0 <= nx && nx < n && 0 <= ny && ny < m)
             {
-                visited[nx][ny] = true;
-                DFS(nx, ny, cnt + 1);
+                if (maze[nx][ny] == 1 && day[nx][ny] == 0)
+                {
+                    day[nx][ny] = day[tmpx][tmpy] + 1;
+                    q.push(make_pair(nx, ny));
+                }
             }
         }
     }
@@ -48,7 +81,8 @@ int main()
         }
     }
 
-    DFS(0, 0, 1);
+    //DFS(0, 0, 1);
+    BFS(0, 0);
 
-    cout << ans << "\n";
+    cout << day[n - 1][m - 1] << "\n";
 }
