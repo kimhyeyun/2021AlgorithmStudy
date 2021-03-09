@@ -6,6 +6,13 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch BFS_13549",
+        "request": "launch",
+        "mainClass": "BFS_13549",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch BFS_1261",
         "request": "launch",
         "mainClass": "BFS_1261",

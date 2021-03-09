@@ -23,8 +23,8 @@ public class BFS_1261 {
 		
 		StringTokenizer stringTokenizer=new StringTokenizer(size);
 
-        int n = Integer.parseInt(stringTokenizer.nextToken());
         int m = Integer.parseInt(stringTokenizer.nextToken());
+        int n = Integer.parseInt(stringTokenizer.nextToken());
 
         int[][] maze = new int[n][m];
         boolean[][] visited = new boolean[n][m];
