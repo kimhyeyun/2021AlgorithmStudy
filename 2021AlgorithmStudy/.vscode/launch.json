@@ -5,6 +5,27 @@
     "version": "0.2.0",
     "configurations": [
       {
+        "type": "java",
+        "name": "Launch BFS_1261",
+        "request": "launch",
+        "mainClass": "BFS_1261",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch BFS_1697",
+        "request": "launch",
+        "mainClass": "BFS_1697",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch abc",
+        "request": "launch",
+        "mainClass": "abc",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
         "name": "clang++ - Build and debug active file",
         "type": "cppdbg",
         "request": "launch",
