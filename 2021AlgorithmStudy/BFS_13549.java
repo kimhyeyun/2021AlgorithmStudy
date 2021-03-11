@@ -1,14 +1,18 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
 public class BFS_13549 {
     public static void main(String[] args) {
+        final int MAX = 100001;
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        int visitedtime[] = new int[100001];
+        int[] visitedtime = new int[MAX];
+        boolean[] check = new boolean[MAX];
 
         if (n == k)
             System.out.println(0);
@@ -16,37 +20,35 @@ public class BFS_13549 {
             Queue<Integer> q = new LinkedList<>();
 
             q.add(n);
-            visitedtime[n] = 1;
+            visitedtime[n] = 0;
+            check[n] =true;
 
             while (!q.isEmpty()) {
                 int tmp = q.poll();
-                int next;
-                boolean flag = false;
-
-                for (int i = 0; i < 3; i++) {
-                    if (i == 0) {
-                        next = tmp + 1;
-                    } else if (i == 1) {
-                        next = tmp - 1;
-                    } else {
-                        next = tmp * 2;
-                        flag = true;
-                    }
-
-                    if (next == k) {
-                        System.out.println(visitedtime[tmp]);
-                        return;
-                    }
-                    if (next >= 0 && next < visitedtime.length && visitedtime[next] == 0) {
-                        if (flag) {
-                            visitedtime[next] = visitedtime[tmp];
-                            q.add(next);
-                        } else {
-                            visitedtime[next] = visitedtime[tmp] + 1;
-                            q.add(next);
-                        }
-                    }
+                
+                if(tmp == k){
+                    System.out.println(visitedtime[k]);
+                    break;
                 }
+
+                if(tmp*2<MAX && !check[tmp*2]){
+                    visitedtime[tmp*2] = visitedtime[tmp];
+                    q.add(tmp*2);
+                    check[tmp*2] = true;
+                }
+
+                if(0<=tmp-1&& !check[tmp-1]){
+                    visitedtime[tmp-1] = visitedtime[tmp]+1;
+                    q.add(tmp-1);
+                    check[tmp-1]=true;
+                }
+                
+                if(tmp+1<MAX && !check[tmp+1]){
+                    visitedtime[tmp+1] = visitedtime[tmp]+1;
+                    q.add(tmp+1);
+                    check[tmp+1] = true;
+                }
+               
             }
         }
     }

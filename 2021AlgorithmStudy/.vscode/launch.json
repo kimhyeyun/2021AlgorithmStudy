@@ -6,6 +6,27 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch BFS_13913_2",
+        "request": "launch",
+        "mainClass": "BFS_13913_2",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch BFS_13913",
+        "request": "launch",
+        "mainClass": "BFS_13913",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch BFS_14226",
+        "request": "launch",
+        "mainClass": "BFS_14226",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch BFS_13549",
         "request": "launch",
         "mainClass": "BFS_13549",
