@@ -6,6 +6,20 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch simulation_16935",
+        "request": "launch",
+        "mainClass": "simulation_16935",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch 시뮬레이션_16935",
+        "request": "launch",
+        "mainClass": "시뮬레이션_16935",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch BFS_20055",
         "request": "launch",
         "mainClass": "BFS_20055",
