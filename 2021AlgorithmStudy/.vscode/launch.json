@@ -6,6 +6,27 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch simulation_15662_re",
+        "request": "launch",
+        "mainClass": "simulation_15662_re",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch simulation_14890_re",
+        "request": "launch",
+        "mainClass": "simulation_14890_re",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch simulation_14499_re",
+        "request": "launch",
+        "mainClass": "simulation_14499_re",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch simulation_16927_re",
         "request": "launch",
         "mainClass": "simulation_16927_re",

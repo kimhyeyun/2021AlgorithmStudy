@@ -3,8 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-import jdk.internal.joptsimple.internal.Rows;
-
 
 public class simulation_16927_re {
     static int n,m,r,sub,arr[][];
@@ -17,7 +15,6 @@ public class simulation_16927_re {
         m = Integer.parseInt(st.nextToken());
         r = Integer.parseInt(st.nextToken());
 
-        sub = Math.min(n,m)/2;
         arr = new int[n][m];
         for(int i=0;i<n;i++){
             st = new StringTokenizer(br.readLine());
@@ -31,8 +28,8 @@ public class simulation_16927_re {
         int col_start = 0;
         int col_end = m-1;
 
-        for(int i=0;i<r;i++){
-            int sub_n = (row_end-row_start)*2+(col_end-col_start)*2-4;
+        while(true){
+            int sub_n = (row_end-row_start+1)*2+(col_end-col_start+1)*2-4;
 
             Spin(row_start,row_end,col_start,col_end,r%sub_n);
             row_start++;
@@ -40,6 +37,8 @@ public class simulation_16927_re {
             col_start++;
             col_end--;
 
+            if(row_start>row_end || col_start>col_end)
+                break;
         }
 
         ArrPrint();
