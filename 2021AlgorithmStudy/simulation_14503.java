@@ -5,11 +5,9 @@ import java.util.StringTokenizer;
 
 public class simulation_14503 {
     static int n, m, x, y, w, dir, place[][];
-    static boolean clean[][];
-    static int[] dx = { 0, -1, 0, 1 };
-    static int[] dy = { -1, 0, 1, 0 };
-    static int[] backx = {1,0,-1,0};
-    static int[] backy = {0,-1,0,1};
+    static int[] dx = {-1,0,1,0};
+    static int[] dy = {0,1,0,-1};
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,7 +17,6 @@ public class simulation_14503 {
         m = Integer.parseInt(st.nextToken());
 
         place = new int[n][m];
-        clean = new boolean[n][m];
 
         st = new StringTokenizer(br.readLine());
         x = Integer.parseInt(st.nextToken());
@@ -33,55 +30,53 @@ public class simulation_14503 {
             }
         }
 
-        int cnt = 1;
-        clean[x][y] = true;
+        int result = Solve(x,y,dir);
 
-        while (true) {
-            int nx = x + dx[dir];
-            int ny = y + dy[dir];
-            
-            if(w == 4 && place[x+backx[dir]][y+backy[dir]] == 1)
-                break;
+        System.out.println(result);
+        
+    }
 
-            if (0 <= nx && nx < n && 0 <= ny && ny < m) {
-                if (place[nx][ny] == 0) {
-                    if (clean[nx][ny]) {
-                        RotateLeft();
-                    } else {
-                        x = nx;
-                        y = ny;
-                        clean[nx][ny] = true;
-                        cnt++;
-                        w = 0;
-                    }
-                }
-                else{
-                    RotateLeft();
-                    
-                    if(w == 4 && place[x+backx[dir]][y+backy[dir]]==0){
-                        x = x + backx[dir];
-                        y = y + backy[dir];
-                        w = 0;
-                    }
-                }
+    private static int Solve(int i, int j, int d) {
+        int dirCnt = 0, cnt = 0, nx, ny;
+        boolean flag = true;
+
+        while(flag){
+            if(place[i][j] == 0){
+                place[i][j] = 2;
+                cnt++;
             }
-            else{
-                RotateLeft();
+
+            while(true){
+                if(dirCnt==4){ //4방향이 모두 청소완료 혹은 벽
+                    nx = i - dx[d];
+                    ny = j - dy[d]; //뒤로
+
+                    if(place[nx][ny] == 1){
+                        //뒤에도 벽이라 후진불가
+                        flag = false;
+                        break;
+                        //종료
+                    }
+                    else{
+                        i = nx;
+                        j = ny;
+                        dirCnt = 0;
+                    }
+                }
+                d = (d+3) %4; //왼쪽방향
+                nx = i + dx[d];
+                ny = j + dy[d];
+
+                if(place[nx][ny] == 0){
+                    dirCnt = 0;
+                    i = nx;
+                    j = ny;
+                    break;
+                }
+                else
+                    dirCnt++;
             }
         }
-        System.out.println(cnt);
-    }
-
-    private static void RotateLeft() {
-        // 왼쪽으로 회전
-        if (dir == 0)
-            dir = 3;
-        else
-            dir = dir - 1;
-
-        w++;
+        return cnt;
     }
 }
-
-
-//ing
