@@ -6,6 +6,20 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch simulation_16931",
+        "request": "launch",
+        "mainClass": "simulation_16931",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch simulation_2290",
+        "request": "launch",
+        "mainClass": "simulation_2290",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch simulation_15685",
         "request": "launch",
         "mainClass": "simulation_15685",
