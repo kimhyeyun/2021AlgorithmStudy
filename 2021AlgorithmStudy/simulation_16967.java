@@ -57,5 +57,5 @@ public class simulation_16967 {
         if(0 <= i && i < h && 0 <= j && j < w)
             return true; 
         return false;
-    }`
+    }
 }
