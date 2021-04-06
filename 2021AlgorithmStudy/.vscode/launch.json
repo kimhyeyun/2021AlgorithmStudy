@@ -6,6 +6,13 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch bruteforce_16938",
+        "request": "launch",
+        "mainClass": "bruteforce_16938",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch bruteforce_16937",
         "request": "launch",
         "mainClass": "bruteforce_16937",
