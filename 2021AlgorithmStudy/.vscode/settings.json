@@ -3,5 +3,8 @@
         "iostream": "cpp",
         "queue": "cpp",
         "utility": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        ""
+    ]
 }

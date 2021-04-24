@@ -6,6 +6,41 @@
     "configurations": [
       {
         "type": "java",
+        "name": "Launch bruteforce_17405",
+        "request": "launch",
+        "mainClass": "bruteforce_17405",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch bruteforce_17089",
+        "request": "launch",
+        "mainClass": "bruteforce_17089",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch bruteforce_2422",
+        "request": "launch",
+        "mainClass": "bruteforce_2422",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch bruteforce_2210",
+        "request": "launch",
+        "mainClass": "bruteforce_2210",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
+        "name": "Launch bruteforce_15686",
+        "request": "launch",
+        "mainClass": "bruteforce_15686",
+        "projectName": "2021AlgorithmStudy_e5226cac"
+      },
+      {
+        "type": "java",
         "name": "Launch bruteforce_17088",
         "request": "launch",
         "mainClass": "bruteforce_17088",
